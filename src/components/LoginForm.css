@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.login-container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: url('https://www.voyanceprestige.com/blog/wp-content/uploads/Fotolia_51794595_Subscription_Monthly_M.jpg') no-repeat center center/cover;
+    background-color: #808080; 
+    filter: grayscale(60%);
+  }
+  
+  .login-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(173, 170, 170, 0.5); 
+    z-index: -1;
+  }
+
+  .login-container p {
+    font-weight: bold; 
+    font-size: 0.8rem;  
+    position: absolute; 
+    top: 5rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 2;
+  }
+
+  .login-box {
+    background: rgba(201, 199, 199, 0.485);
+    padding: 7rem 10rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9), 0 6px 20px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .login-title {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -180px; 
+  }
+
+  .login-box input {
+    width: 100%;
+    padding: 10px 20px; 
+    box-sizing: border-box; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 15px; 
+    font-size: medium;
+  }
+  
+  .forgot-password {
+    text-align: right;
+    margin-top: 0.5rem;
+    font-weight: bold;
+  }
+  
+  button {
+    background-color: #cd6666f1;
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 1rem 3rem;
+    margin-top: 1rem;
+    font-size: large;
+    font-weight: bold;
+   
+  }
+    
+  .signup-link {
+    margin-top: 2rem;
+    font-size: larger;
+    font-weight: bold;
+    color: white;
+  }
+
+  .title{
+    color: white;
+    font-family: 'Inter', sans-serif; 
+    font-size: 2.4rem; 
+    font-weight: 700; 
+    position: absolute; 
+    top: 1rem; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    z-index: 2;
+  }
+
+  /* Media query pour les écrans jusqu'à 700px de large */
+@media (max-width: 700px) {
+    .login-box {
+      padding: 1.7rem; 
+    }
+  
+    .login-box input, button {
+      padding: 10px; 
+    }
+  
+    .title {
+      font-size: 1.7rem; 
+    }
+    
+    .login-container p {
+        font-size: 0.7rem; 
+      }
+  
+    .login-title {
+      margin-top: -90px; 
+    }
+  }
+  
+  /* Media query pour les écrans très petits, comme les téléphones mobiles */
+  @media (max-width: 480px) {
+    .login-box {
+      padding: 1rem; 
+    }
+  
+    .login-title {
+      margin-top: -60px; 
+    }
+  
+    .title {
+      font-size: 1.5rem; 
+    }
+
+    .login-container p {
+        font-size: 0.5rem; 
+      }
+  }
+
+  @media (max-width: 700px) {
+    .login-title img {
+      height: 70px; 
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .login-title img {
+      height: 50px; 
+    }
+  }
+  
