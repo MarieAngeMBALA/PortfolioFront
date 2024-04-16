@@ -22,7 +22,7 @@ const LoginModal = ({ isOpen, onRequestClose }) => {
       console.log("Réponse du serveur:", response.data);
 
       if (response.data.accessToken) {
-        login(response.data.accesToken); 
+        login(response.data.accessToken); 
         alert('Connexion réussie!');
         onRequestClose(); 
         navigate('/'); 

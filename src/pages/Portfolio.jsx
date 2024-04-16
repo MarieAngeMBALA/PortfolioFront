@@ -13,7 +13,7 @@ const PortfolioPage = () => {
         <Route path="/about" element={<AboutSection />} />
         <Route path="/projects" element={<ProjectSection />} />
         <Route path="/contact" element={<ContactSection />} />
-        <Route path="/" element={<AboutSection />} />
+        <Route path="/" element={<ProjectSection />} />
       </Routes>
       // contenu 
     </div>
