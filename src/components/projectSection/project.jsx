@@ -2,6 +2,7 @@ import React, { useEffect, useState, useContext } from 'react';
 import './project.css'; 
 import axios from 'axios';
 import ProjectCreateModal from './createProjectModal';
+import ProjectEditModal from './editModal'; 
 import { useAuth } from '../../context/authContext'; 
 
 const Projects = () => {
@@ -9,9 +10,12 @@ const Projects = () => {
   //const { isAdminLoggedIn } = useContext(useAuth);  
   const { isAdminLoggedIn } = useAuth();
   const [modalOpen, setModalOpen] = useState(false);
+  const [editModalOpen, setEditModalOpen] = useState(false);
+  const [currentProject, setCurrentProject] = useState(null);
 
   const handleModalClose = (refresh) => {
     setModalOpen(false);
+    setEditModalOpen(false);
     if (refresh) fetchProjects(); // Recharger la liste des projets si un nouveau projet a été ajouté
   };
 
@@ -56,7 +60,10 @@ const Projects = () => {
             <p>{project.content}</p>
             {isAdminLoggedIn && (
               <div>
-                <button onClick={() => {/* implémentez la navigation vers le formulaire de modification */}}>Modifier</button>
+                <button onClick={() => {
+                  setCurrentProject(project);
+                  setEditModalOpen(true);
+                  }}>Modifier</button>
                 <button onClick={() => handleDelete(project._id)}>Supprimer</button>
               </div>
             )}
@@ -64,6 +71,7 @@ const Projects = () => {
         ))}
       </ul>
       <ProjectCreateModal isOpen={modalOpen} onClose={handleModalClose} />
+      <ProjectEditModal isOpen={editModalOpen} onClose={handleModalClose} project={currentProject} />
     </div>
   );
 };
