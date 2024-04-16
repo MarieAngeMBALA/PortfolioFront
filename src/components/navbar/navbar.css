@@ -1,0 +1,23 @@
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #202020d4; /* Modifier avec votre couleur de fond */
+    padding: 1rem;
+  }
+  
+  .navbar a {
+    color: #fff; /* Couleur du texte des liens */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+  }
+  
+  .navbar a.active,
+  .navbar a:hover {
+    color: #04c; /* Couleur du texte des liens actifs et au survol */
+    border-bottom: 2px solid #04c; /* Sous-ligne pour l'onglet actif */
+  }
+  .active {
+    color: red; /* Exemple : mettez la couleur du lien actif en rouge */
+  }
+  

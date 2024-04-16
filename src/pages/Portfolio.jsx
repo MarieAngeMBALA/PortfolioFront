@@ -1,14 +1,23 @@
 import React from 'react';
-import Footer from '../components/Footer';
+import Navbar from '../components/navbar/navbar';
+import AboutSection from '../components/aboutSection/about';
+import ProjectSection from '../components/projectSection/project';
+import ContactSection from '../components/contactSection/contact';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
-const Portfolio = () => {
+const PortfolioPage = () => {
   return (
     <div>
-      <h1>Portfolio Page</h1>
-      <p>This is the portfolio page.</p>
-      <Footer />
+      <Navbar />
+      <Routes>
+        <Route path="/about" element={<AboutSection />} />
+        <Route path="/projects" element={<ProjectSection />} />
+        <Route path="/contact" element={<ContactSection />} />
+        <Route path="/" element={<AboutSection />} />
+      </Routes>
+      // contenu 
     </div>
   );
 };
 
-export default Portfolio;
+export default PortfolioPage;
