@@ -1,12 +1,19 @@
 import React, { useEffect, useState, useContext } from 'react';
 import './project.css'; 
 import axios from 'axios';
+import ProjectCreateModal from './createProjectModal';
 import { useAuth } from '../../context/authContext'; 
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   //const { isAdminLoggedIn } = useContext(useAuth);  
   const { isAdminLoggedIn } = useAuth();
+  const [modalOpen, setModalOpen] = useState(false);
+
+  const handleModalClose = (refresh) => {
+    setModalOpen(false);
+    if (refresh) fetchProjects(); // Recharger la liste des projets si un nouveau projet a été ajouté
+  };
 
   useEffect(() => {
     fetchProjects();
@@ -34,7 +41,7 @@ const Projects = () => {
     <div>
       <h1>Liste des Projets</h1>
       {isAdminLoggedIn && (
-        <button onClick={() => {/* implémentez la navigation vers le formulaire de création */}}>
+        <button onClick={() => setModalOpen(true)}>
           Créer Projet
         </button>
       )}
@@ -56,6 +63,7 @@ const Projects = () => {
           </li>
         ))}
       </ul>
+      <ProjectCreateModal isOpen={modalOpen} onClose={handleModalClose} />
     </div>
   );
 };
