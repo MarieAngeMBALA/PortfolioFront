@@ -11,12 +11,12 @@
     text-decoration: none; /* Pas de soulignement */
     margin-left: 20px; /* Espacement entre les liens */
     padding: 10px; /* Espace autour des liens pour un meilleur toucher */
-    border: 2px solid transparent; /* Préparer la bordure mais la rendre transparente */
+    border: 4px solid transparent; /* Préparer la bordure mais la rendre transparente */
     transition: border-color 0.3s; /* Transition pour l'animation de la bordure */
 }
 
 .navbar a:hover, .navbar a.active {
-    border-color: #97edb4; /* Couleur de bordure pour l'état hover et active */
+    border-color: #ff04de; /* Couleur de bordure pour l'état hover et active */
 }
 
 
