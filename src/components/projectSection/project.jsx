@@ -4,11 +4,13 @@ import axios from 'axios';
 import ProjectCreateModal from './createProjectModal';
 import ProjectEditModal from './editModal'; 
 import { useAuth } from '../../context/authContext'; 
+import { useNavigate } from 'react-router-dom';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
   //const { isAdminLoggedIn } = useContext(useAuth);  
   const { isAdminLoggedIn } = useAuth();
+  const navigate = useNavigate();
   const [modalOpen, setModalOpen] = useState(false);
   const [editModalOpen, setEditModalOpen] = useState(false);
   const [currentProject, setCurrentProject] = useState(null);
@@ -41,6 +43,14 @@ const Projects = () => {
     }
   };
 
+  const handleViewAnalytics = () => {
+    navigate('/analytics'); 
+  };
+
+  const handleViewProject = (projectId) => {
+    navigate(`/projects/${projectId}`);
+  };
+
   return (
     <div>
       <h1>Liste des Projets</h1>
@@ -58,7 +68,11 @@ const Projects = () => {
             <h3>{project.title}</h3>
             <h5>{project.description}</h5>
             <p>{project.content}</p>
+            <button onClick={() => handleViewProject(project._id)}>
+                  View more
+              </button>
             {isAdminLoggedIn && (
+              <>
               <div>
                 <button onClick={() => {
                   setCurrentProject(project);
@@ -66,10 +80,20 @@ const Projects = () => {
                   }}>Modifier</button>
                 <button onClick={() => handleDelete(project._id)}>Supprimer</button>
               </div>
+              </> 
             )}
           </li>
         ))}
       </ul>
+      <div>
+        {isAdminLoggedIn && (
+          <div>
+            <button onClick={handleViewAnalytics}>
+                View Analytics
+            </button>
+          </div>
+        )}
+      </div>
       <ProjectCreateModal isOpen={modalOpen} onClose={handleModalClose} />
       <ProjectEditModal isOpen={editModalOpen} onClose={handleModalClose} project={currentProject} />
     </div>

@@ -21,7 +21,6 @@ const App = () => {
             {/* <Route path="/portfolio" element={<Portfolio />} /> */}
             <Portfolio />
             <Footer className="Footer"/>
-       
         </AuthProvider>
       </div>
     </Router>
