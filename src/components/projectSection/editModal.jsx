@@ -39,7 +39,7 @@ const ProjectEditModal = ({ isOpen, onClose, project }) => {
                     <label>Titre:</label>
                     <input type="text" value={title} onChange={e => setTitle(e.target.value)} required />
                     <label>Description:</label>
-                    <input type="text" value={description} onChange={e => setDescription(e.target.value)} required />
+                    <input type="text" value={description} onChange={e => setDescription(e.target.value)} required maxLength={1000}/>
                     <label>Contenu:</label>
                     <textarea value={content} onChange={e => setContent(e.target.value)} required />
                     <button type="submit">Modifier Projet</button>
