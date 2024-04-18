@@ -1,23 +1,49 @@
 .navbar {
     display: flex;
-    justify-content: space-around;
+    justify-content: flex-end;
     align-items: center;
-    background-color: #202020d4; /* Modifier avec votre couleur de fond */
-    padding: 1rem;
+    background-color: #000000; /* Modifier avec votre couleur de fond */
+   
   }
   
   .navbar a {
-    color: #fff; /* Couleur du texte des liens */
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-  }
-  
-  .navbar a.active,
-  .navbar a:hover {
-    color: #04c; /* Couleur du texte des liens actifs et au survol */
-    border-bottom: 2px solid #04c; /* Sous-ligne pour l'onglet actif */
-  }
-  .active {
-    color: red; /* Exemple : mettez la couleur du lien actif en rouge */
-  }
+    color: white; /* Couleur du texte des liens */
+    text-decoration: none; /* Pas de soulignement */
+    margin-left: 20px; /* Espacement entre les liens */
+    padding: 10px; /* Espace autour des liens pour un meilleur toucher */
+    border: 2px solid transparent; /* Préparer la bordure mais la rendre transparente */
+    transition: border-color 0.3s; /* Transition pour l'animation de la bordure */
+}
+
+.navbar a:hover, .navbar a.active {
+    border-color: #97edb4; /* Couleur de bordure pour l'état hover et active */
+}
+
+
+  .navbar-login-icon {
+    margin-left: 100px; /* Espacement entre l'icône et les liens */
+    cursor: pointer; /* Change le curseur en main lorsque vous survolez l'icône */
+    color: aliceblue;
+    margin-right: 30px;
+}
+
+.name{
+  color: aliceblue;
+  margin-right: 400px;
+  font-size: 1.8rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.navbar-login-icon .icon-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer; /* Makes the entire container clickable */
+}
+
+.navbar-login-icon .icon-label {
+  margin-top: 4px; /* Spacing between the icon and the text */
+  color: rgba(255, 255, 255, 0.398); /* Adjust color as needed */
+  font-size: 14px; /* Adjust font size as needed */
+}
   
