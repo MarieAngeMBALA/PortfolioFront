@@ -2,8 +2,44 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
-  padding: 20px;
+  padding: 10px;
+  max-width: 1600px; /* or whatever maximum width you prefer */
+  margin: auto;
+
 }
+
+.project-container {
+  max-width: 1400px; /* or whatever maximum width you prefer */
+  margin: auto;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for some depth */
+}
+
+/* Container de la barre */
+.bar-container {
+  width: 700px; /* Largeur totale de la barre */
+  height: 3px; /* Hauteur de la barre */
+  background-color: #100f0f28; /* Couleur de fond de la partie non mise en évidence */
+  position: relative; /* Pour positionner absolument la partie en surbrillance à l'intérieur */
+  overflow: hidden; /* Garde la surbrillance à l'intérieur des bords arrondis */
+  margin: 0 auto; 
+}
+
+.title-section{
+  align-items: center;
+    justify-content: center;
+}
+
+/* Partie mise en évidence de la barre */
+.highlight {
+  width: 30%; /* Pourcentage de la barre que vous souhaitez mettre en évidence */
+  height: 100%; /* La hauteur de la surbrillance correspond à celle du container */
+  background-color: #ffd700; /* Couleur de la partie mise en évidence */
+  position: absolute; /* Positionne la surbrillance par rapport à son parent */
+  left: 50%; /* Débute au milieu de la barre */
+  transform: translateX(-50%); /* Centrer la surbrillance par rapport à son point de départ */
+}
+
 
 .project-item {
   
@@ -43,7 +79,7 @@
 }
 
 .project-button {
-  background-color: #007bff;
+  background-color: #ffa200;
   color: white;
   border: none;
   padding: 8px 16px;
@@ -53,7 +89,9 @@
 }
 
 .project-button:hover {
-  background-color: #0056b3;
+  background-color: #fcc203dc;
+  border-color: #ff04de; /* Couleur de bordure pour l'état hover et active */
+    transform: scale(1.2);
 }
 
 /* Additional responsive adjustments if needed */
@@ -64,19 +102,19 @@
 }
 
 .create-project-btn, .view-analytics-btn {
-  background-color: #28a745; /* A nice green for creation button */
+  background-color: #9f09f0; /* A nice green for creation button */
   color: white;
-  border: none;
-  padding: 10px 20px;
+  border: 2px solid black;
+  padding: 20px 40px;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin: 10px; /* Add some margin around the buttons */
+  margin: 2px; /* Add some margin around the buttons */
   font-size: 1rem;
 }
 
 .create-project-btn:hover, .view-analytics-btn:hover {
-  background-color: #218838;
+  background-color: #c525d0c9;
 }
 
 /* Make sure buttons are visible outside the projects container */

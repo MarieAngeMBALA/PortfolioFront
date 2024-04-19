@@ -6,6 +6,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import FaceIcon from '@mui/icons-material/Face';
 import { useAuth } from '../../context/authContext';
 import LoginModal from '../LoginModal';
+import lc from '../../assets/lc.png';
 
 const Navbar = () => {
   const { isAdminLoggedIn, logout } = useAuth();
@@ -28,7 +29,11 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <h1 className='name'>Marie-Ange MBALA</h1>
+      <div className="header-container">
+    <h1 className='name'>Marie-Ange MBALA </h1>
+    <p className='lc'>.</p>
+</div>
+
         <NavLink to="/about" className={({ isActive }) => isActive ? "active" : ""}>About me</NavLink>
         <NavLink to="/projects" className={({ isActive }) => isActive ? "active" : ""}>My Projects</NavLink>
         <NavLink to="/contact" className={({ isActive }) => isActive ? "active" : ""}>Contact-me</NavLink>

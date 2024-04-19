@@ -1,61 +1,24 @@
-/* ProjectTemplate.css */
-
 .project-template-container {
+    max-width: 800px; /* Limite la largeur pour une lecture confortable */
+    margin: 0 auto; /* Centre le conteneur sur la page */
     padding: 20px;
-    max-width: 800px;
-    margin: auto;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .project-template-container h1 {
-    color: #333;
-    font-size: 2rem;
-  }
-  
-  .project-template-container p {
-    color: #666;
-    line-height: 1.6;
-  }
-  
-  .project-template-container button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    font-size: 1rem;
-    margin-right: 10px; /* Adds margin between buttons */
-  }
-  
-  .project-template-container button:hover {
-    background-color: #0056b3;
-  }
-  
-  .project-template-container .back-button {
-    background-color: #6c757d;
-    margin-bottom: 20px; /* Adds some space above the title */
-  }
-  
-  .project-template-container .back-button:hover {
-    background-color: #565e64;
-  }
-  
- 
-  /* If there is a special welcome message */
-  .welcome-message {
-    font-style: italic;
-    color: #888;
-    margin-top: 20px;
-  }
-  
-  /* Responsive design adjustments */
-  @media (max-width: 768px) {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff; /* Couleur de fond pour le conteneur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre portée pour un effet élégant */
+    border-radius: 10px; /* Bords arrondis */
+}
+
+/* Utilisez les media queries pour ajuster la mise en page sur les petits écrans */
+@media (max-width: 768px) {
     .project-template-container {
-      padding: 10px;
+        padding: 10px;
     }
-  }
-  
+
+    h1 {
+        font-size: 2rem; /* Taille plus petite du titre sur les petits écrans */
+    }
+
+    button {
+        padding: 8px 16px; /* Padding plus petit pour les boutons */
+    }
+}

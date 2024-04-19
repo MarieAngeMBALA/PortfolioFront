@@ -6,6 +6,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 
 const FooterSection = () => {
   return (
+    <div className='content'>
     <footer className="footer">
       <div className="social-icons">
         {/* Replace # with your actual links */}
@@ -18,6 +19,7 @@ const FooterSection = () => {
         <p>Copyright &copy;2024; Designed by Marie-Ange MBALA</p>
       </div>
     </footer>
+    </div>
   );
 };
 

@@ -15,8 +15,11 @@
     background-color: rgba(255, 255, 255, 0.889); 
     z-index: -1;
   }
-  
-  .Footer {
-        grid-row-start: 3;
-        grid-row-end: 4;
-  }
+  html, body {
+    min-height: 100%;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* Évitez les débordements horizontaux */
+}
+

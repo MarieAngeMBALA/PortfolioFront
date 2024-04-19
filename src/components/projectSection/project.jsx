@@ -5,7 +5,7 @@ import ProjectCreateModal from './createProjectModal';
 import ProjectEditModal from './editModal'; 
 import { useAuth } from '../../context/authContext'; 
 import { useNavigate } from 'react-router-dom';
-import trade2 from '../../assets/trade2.png';
+import trade2 from '../../assets/ia.png';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -54,13 +54,27 @@ const Projects = () => {
 
   return (
     <>
-    <h1>ACADEMICS PROJECT</h1>
+    <div className="project-container">
+    <div className='title-section'>
+      <h1>ACADEMICS PROJECT</h1>
+      <div class="bar-container">
+        <div class="highlight"></div>
+      </div>
+      <div className="subtitle">Now enjoy a visit to all my innovative projects 👩‍💻</div>
+    </div>
     {isAdminLoggedIn && (
+      <>
       <button className="create-project-btn" onClick={() => setModalOpen(true)}>
-        Create a Project
+        Create a New Project
       </button>
+     
+        <button className="create-project-btn" onClick={handleViewAnalytics}>
+          View Analytics
+        </button>
+        </>
     )}
     <div className="projects-container">
+  
       {projects.map((project) => (
         <div key={project._id} className="project-item">
           <img 
@@ -92,11 +106,8 @@ const Projects = () => {
       <ProjectCreateModal isOpen={modalOpen} onClose={handleModalClose} />
       <ProjectEditModal isOpen={editModalOpen} onClose={handleModalClose} project={currentProject} />
     </div>
-    {isAdminLoggedIn && (
-      <button className="view-analytics-btn" onClick={handleViewAnalytics}>
-        View Analytics
-      </button>
-    )}
+    </div>
+    
     <ProjectCreateModal isOpen={modalOpen} onClose={handleModalClose} />
     <ProjectEditModal isOpen={editModalOpen} onClose={handleModalClose} project={currentProject} />
     </>

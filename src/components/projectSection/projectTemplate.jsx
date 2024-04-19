@@ -3,6 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ProjectEditModal from './editModal'; 
 import { useAuth } from '../../context/authContext';
+import './projectTemplate.css'
 
 const ProjectTemplate = () => {
     const { projectId } = useParams();
@@ -46,7 +47,6 @@ const ProjectTemplate = () => {
             <h1>{project.title}</h1>
             <p>{project.description}</p>
             <div>{project.content}</div>
-            <h4>WELCOME AAA</h4>
             {isAdminLoggedIn && (
                 <div>
                     <button onClick={() => {

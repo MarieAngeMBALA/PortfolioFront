@@ -2,21 +2,25 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background-color: #000000; /* Modifier avec votre couleur de fond */
+    background-color: #02011bdf; /* Modifier avec votre couleur de fond */
    
   }
   
   .navbar a {
+    display: flex;
     color: white; /* Couleur du texte des liens */
     text-decoration: none; /* Pas de soulignement */
     margin-left: 20px; /* Espacement entre les liens */
+    margin: 0 70px;
     padding: 10px; /* Espace autour des liens pour un meilleur toucher */
     border: 2px solid transparent; /* Préparer la bordure mais la rendre transparente */
-    transition: border-color 0.3s; /* Transition pour l'animation de la bordure */
+    transition: border-color 0.3s transform 0.3s; /* Transition pour l'animation de la bordure */
 }
 
 .navbar a:hover, .navbar a.active {
     border-color: #ff04de; /* Couleur de bordure pour l'état hover et active */
+    transform: scale(1.2);
+    background-color: #ff04de;
 }
 
 
@@ -29,9 +33,8 @@
 
 .name{
   color: aliceblue;
-  margin-right: 40%;
+  margin-right: 400px;
   font-size: 1.8rem;
-  font-family: inter;
 }
 
 .navbar-login-icon .icon-container {

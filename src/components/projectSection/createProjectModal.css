@@ -93,6 +93,18 @@
     background-color: #1765c1;
   }
   
+  .image-preview {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .image-container {
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 4px;
+  }
   @media (max-width: 768px) {
     .modal-content {
       width: 80%;

@@ -1,7 +1,6 @@
 .footer {
    
     color: rgb(19, 18, 18); /* Couleur du texte */
-    padding: 1rem 0; /* Padding vertical pour donner de l'espace */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,7 +10,6 @@
     bottom: 0;
     width: 100%; /* Largeur totale */
     height: 60px; /* Hauteur fixe du footer */
-    z-index: 1; /* S'assure que le footer est au-dessus des autres éléments */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Ombre pour le distinguer du contenu */
   }
   
@@ -20,6 +18,7 @@
     align-items: center;
     justify-content: center;
     margin-left: 20px; /* Espacement depuis le bord gauche */
+    padding-bottom: 10px; 
   }
   
   .social-icons a {
@@ -32,33 +31,16 @@
   .social-icons a:hover {
     color: #545050; /* Couleur au survol des icônes */
   }
-  
-  .footer-nav {
-    list-style: none;
-    display: flex;
-    margin-right: 20px; /* Espacement depuis le bord droit */
-  }
-  
-  .footer-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .footer-nav a:hover {
-    text-decoration: underline; /* Soulignement au survol */
-  }
-  
+
+  .content {
+    padding-bottom:50px; /* Assurez-vous que cette valeur est au moins égale à la hauteur de votre footer */
+}
+
   .footer-info {
-    text-align: center;
+    text-align: right;
     width: 100%;
-    font-size: 0.8em;
-  }
-  
-  /* Pour empêcher le contenu de se cacher derrière le footer */
-  .body-content {
-    padding-bottom: 80px; /* Au moins la hauteur du footer */
+    font-size: 0.6em;
+    color: #545050;
   }
   
   /* Média query pour le responsive design */

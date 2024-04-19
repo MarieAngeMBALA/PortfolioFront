@@ -6,23 +6,26 @@ import './createProjectModal.css'
 const ProjectCreateModal = ({ isOpen, onClose }) => {
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
+    const [keywords, setKeywords] = useState('');
     const [content, setContent] = useState('');
 
-    const handleSubmit = async (event) => {
+   const handleSubmit = async (event) => {
         event.preventDefault();
         try {
             const response = await axios.post('http://localhost:3000/api/projects/create', {
                 title,
                 description,
+                keywords,
                 content
             });
             onClose(true); // fermer le modal et signaler un succès
+            //reloadData();
         } catch (error) {
             alert('Erreur lors de la création du projet : ' + error.message);
         }
     };
 
-    if (!isOpen) return null;
+if (!isOpen) return null;
 
     return (
         <div className="modal">
@@ -46,6 +49,15 @@ const ProjectCreateModal = ({ isOpen, onClose }) => {
                 className="textarea"
                 value={description}
                 onChange={e => setDescription(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label className="label">Your project keywords:</label>
+              <input
+                className="input-text"
+                value={keywords}
+                onChange={e => setKeywords(e.target.value)}
                 required
               />
             </div>
