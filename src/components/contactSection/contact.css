@@ -1,0 +1,101 @@
+/* Base du formulaire */
+form {
+    max-width: 600px; /* Ou la largeur souhaitée */
+    margin: auto;
+    padding: 2rem;
+    background: #f7f7f7;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styles pour les inputs et textarea */
+form input[type="text"],
+form textarea {
+    width: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd; /* Couleur de la bordure */
+    border-radius: 4px; /* Rayon de la bordure */
+    font-size: 1rem;
+    background: white;
+}
+
+/* Placeholders style */
+::placeholder {
+    color: #aaa; /* Couleur du placeholder */
+}
+
+/* Bouton d'envoi */
+form button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    background: #333; /* Couleur de fond */
+    color: white; /* Couleur du texte */
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 4px; /* Rayon de la bordure */
+    transition: background-color 0.3s ease;
+}
+
+/* Hover effect pour le bouton */
+form button:hover {
+    background: #555; /* Couleur de fond au survol */
+}
+
+/* Responsive Design: S'assure que le formulaire reste utilisable sur petits écrans */
+@media (max-width: 768px) {
+    form {
+        padding: 1rem;
+    }
+    form button {
+        padding: 0.75rem;
+    }
+}
+
+/* Adaptation des champs requis - facultatif */
+form input:required,
+form textarea:required {
+    box-shadow: none;
+}
+
+
+.contact-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Arial', sans-serif;
+}
+
+.contact-text {
+    flex: 1;
+    padding-right: 50px; /* Ajoutez un peu d'espace entre le texte et le formulaire */
+}
+
+.contact-form {
+    flex: 1;
+    max-width: 500px; /* ou la largeur de votre choix pour le formulaire */
+    padding: 2rem;
+    background: #fff;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    margin-left: 50px; /* Ajoutez un peu d'espace entre le texte et le formulaire */
+}
+
+/* Autres styles nécessaires pour les inputs, boutons, etc. */
+
+@media (max-width: 768px) {
+    .contact-section {
+        flex-direction: column;
+    }
+
+    .contact-text,
+    .contact-form {
+        padding-right: 0;
+        max-width: 100%;
+        margin-left: 0;
+        margin-bottom: 20px;
+    }
+}

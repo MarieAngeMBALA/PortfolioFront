@@ -11,7 +11,7 @@
     bottom: 0;
     width: 100%; /* Largeur totale */
     height: 60px; /* Hauteur fixe du footer */
-    z-index: 100; /* S'assure que le footer est au-dessus des autres éléments */
+    z-index: 1; /* S'assure que le footer est au-dessus des autres éléments */
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Ombre pour le distinguer du contenu */
   }
   

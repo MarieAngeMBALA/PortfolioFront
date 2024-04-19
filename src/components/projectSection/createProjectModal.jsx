@@ -1,6 +1,7 @@
 // ProjectCreateModal.js
 import React, { useState } from 'react';
 import axios from 'axios';
+import './createProjectModal.css'
 
 const ProjectCreateModal = ({ isOpen, onClose }) => {
     const [title, setTitle] = useState('');
@@ -25,33 +26,43 @@ const ProjectCreateModal = ({ isOpen, onClose }) => {
 
     return (
         <div className="modal">
-            <div className="modal-content">
-                <span className="close" onClick={() => onClose()}>&times;</span>
-                <form onSubmit={handleSubmit}>
-                    <label>Titre du Projet:</label>
-                    <input
-                        type="text"
-                        value={title}
-                        onChange={e => setTitle(e.target.value)}
-                        required
-                    />
-                    <label>Description:</label>
-                    <textarea
-                        value={description}
-                        onChange={e => setDescription(e.target.value)}
-                        required
-                    />
-                    <label>Contenu du Projet:</label>
-                    <textarea
-                        value={content}
-                        onChange={e => setContent(e.target.value)}
-                        required
-                    />
-                    <button type="submit">Créer Projet</button>
-                </form>
+        <div className="modal-content">
+          <span className="close" onClick={() => onClose()}>&times;</span>
+          <div className="modal-header">Formulaire de création de projet</div>
+          <form onSubmit={handleSubmit} className="modal-form">
+            <div className="form-group">
+              <label className="label">Titre du Projet:</label>
+              <input
+                type="text"
+                className="input-text"
+                value={title}
+                onChange={e => setTitle(e.target.value)}
+                required
+              />
             </div>
+            <div className="form-group">
+              <label className="label">Description:</label>
+              <textarea
+                className="textarea"
+                value={description}
+                onChange={e => setDescription(e.target.value)}
+                required
+              />
+            </div>
+            <div className="form-group">
+              <label className="label">Contenu du Projet:</label>
+              <textarea
+                className="textarea"
+                value={content}
+                onChange={e => setContent(e.target.value)}
+                required
+              />
+            </div>
+            <button type="submit" className="submit-btn">Créer Projet</button>
+          </form>
         </div>
+      </div>
     );
-};
-
-export default ProjectCreateModal;
+  };
+  
+  export default ProjectCreateModal;

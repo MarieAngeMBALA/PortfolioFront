@@ -5,6 +5,7 @@ import ProjectCreateModal from './createProjectModal';
 import ProjectEditModal from './editModal'; 
 import { useAuth } from '../../context/authContext'; 
 import { useNavigate } from 'react-router-dom';
+import trade2 from '../../assets/trade2.png';
 
 const Projects = () => {
   const [projects, setProjects] = useState([]);
@@ -52,51 +53,53 @@ const Projects = () => {
   };
 
   return (
-    <div>
-      <h1>Liste des Projets</h1>
-      {isAdminLoggedIn && (
-        <button onClick={() => setModalOpen(true)}>
-          Créer Projet
-        </button>
-      )}
-
-      {/*//projet*/}
-
-      <ul>
-        {projects.map((project) => (
-          <li key={project._id}>
-            <h3>{project.title}</h3>
-            <h5>{project.description}</h5>
+    <>
+    <h1>ACADEMICS PROJECT</h1>
+    {isAdminLoggedIn && (
+      <button className="create-project-btn" onClick={() => setModalOpen(true)}>
+        Create a Project
+      </button>
+    )}
+    <div className="projects-container">
+      {projects.map((project) => (
+        <div key={project._id} className="project-item">
+          <img 
+            src={project.thumbnail || trade2} // Replace with your default thumbnail if none
+            alt={project.title} 
+            className="project-thumbnail"
+          />
+          <div className="project-content">
+            <h3 className="project-title">{project.title}</h3>
+            <h5 className="project-description">{project.description}</h5>
             <p>{project.content}</p>
-            <button onClick={() => handleViewProject(project._id)}>
-                  View more
-              </button>
+          </div>
+          <div className="project-actions">
+            <button onClick={() => handleViewProject(project._id)} className="project-button">
+              View more
+            </button>
             {isAdminLoggedIn && (
               <>
-              <div>
                 <button onClick={() => {
                   setCurrentProject(project);
                   setEditModalOpen(true);
-                  }}>Modifier</button>
-                <button onClick={() => handleDelete(project._id)}>Supprimer</button>
-              </div>
-              </> 
+                }} className="project-button">Modifier</button>
+                <button onClick={() => handleDelete(project._id)} className="project-button">Supprimer</button>
+              </>
             )}
-          </li>
-        ))}
-      </ul>
-      <div>
-        {isAdminLoggedIn && (
-          <div>
-            <button onClick={handleViewAnalytics}>
-                View Analytics
-            </button>
           </div>
-        )}
-      </div>
+        </div>
+      ))}
       <ProjectCreateModal isOpen={modalOpen} onClose={handleModalClose} />
       <ProjectEditModal isOpen={editModalOpen} onClose={handleModalClose} project={currentProject} />
     </div>
+    {isAdminLoggedIn && (
+      <button className="view-analytics-btn" onClick={handleViewAnalytics}>
+        View Analytics
+      </button>
+    )}
+    <ProjectCreateModal isOpen={modalOpen} onClose={handleModalClose} />
+    <ProjectEditModal isOpen={editModalOpen} onClose={handleModalClose} project={currentProject} />
+    </>
   );
 };
 

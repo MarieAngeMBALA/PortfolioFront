@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import axios from 'axios';
+import './analytics.css'
 
 const Analytics = () => {
     const [skillsData, setSkillsData] = useState([]);
@@ -37,18 +38,29 @@ const Analytics = () => {
     }, []);
 
     return (
-        <div>
+        <div className="analytics-container">
+            <div className="analytics-text">
             <h1>Analytics Dashboard</h1>
             <p>Nombre total de projets: {totalProjects}</p>
+            
+            </div>
+            
+            <div className="chart-container">
             <h2>Skills Percentage</h2>
-            <BarChart width={800} height={700} data={skillsData}>
-                <CartesianGrid strokeDasharray="5 5" />
+            <BarChart width={700} height={600} data={skillsData}>
+                <CartesianGrid  />
                 <XAxis dataKey="name" />
                 <YAxis domain={[0, 100]} />
                 <Tooltip />
                 <Legend />
                 <Bar dataKey="percentage" fill="#8884d8" name="Percentage" />
             </BarChart>
+            </div>
+            <div className="legend-container">
+                <h2 className="legend-title">Legend</h2>
+                <p className="legend-text">Some explanatory text about the graph...</p>
+                {/* ... plus de texte ou des éléments si nécessaire */}
+            </div>
         </div>
     );
 };

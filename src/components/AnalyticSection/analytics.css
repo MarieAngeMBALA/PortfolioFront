@@ -1,0 +1,122 @@
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1em;
+}
+
+/* Stylisation des graphiques recharts */
+.recharts-wrapper {
+    user-select: none;
+    margin-bottom: 4em;
+}
+
+.recharts-bar .recharts-cartesian-axis-tick {
+    font-size: 0.85rem;
+}
+
+.recharts-cartesian-axis-line,
+.recharts-cartesian-grid line {
+    stroke: #a08f8f; /* Couleur des lignes de grille et des axes */
+}
+
+.recharts-tooltip-wrapper {
+    font-size: 0.9rem;
+}
+
+.recharts-legend-wrapper {
+    font-size: 0.9rem;
+}
+
+.BarChart {
+    box-shadow: 0 4px 8px 0 rgb(186, 24, 24);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Styles spécifiques pour le remplissage de la barre */
+.recharts-bar-rectangle {
+    fill: #d82e4a;
+}
+
+.analytics-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    font-family: 'Arial', sans-serif;
+    margin: 20px;
+    
+    max-width: 1200px; /* ou toute autre largeur maximale selon votre design */
+}
+.analytics-text {
+    flex: 1; /* Prend l'espace nécessaire */
+    margin-right: 40px; /* Augmentez cette valeur pour plus d'espace */
+    display: flex;
+    flex-direction: column; /* Organise les éléments de texte verticalement */
+    justify-content: center; /* Centre les éléments verticalement dans l'espace disponible */
+}
+
+.chart-container {
+    flex: 0 0 70%; /* utilise 70% de l'espace disponible */
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(2, 5, 4, 3);
+    border-radius: 8px;
+    margin-right: 20px; /* espace entre le graphique et la légende */
+}
+
+.legend-container {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles de texte pour la légende */
+.legend-title {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.legend-text {
+    font-size: 1em;
+    color: #666;
+}
+
+h1 {
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    overflow: hidden; /* Empêche le débordement du contenu */
+    text-overflow: ellipsis; /* Ajoute des points de suspension si le texte dépasse la largeur disponible */
+    font-size: 2rem;
+    margin-bottom: 0.5em;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .analytics-container {
+        padding: 10px;
+    }
+
+    .recharts-bar .recharts-cartesian-axis-tick {
+        font-size: 0.75rem;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.2rem;
+    }
+    analytics-container {
+        flex-direction: column;
+    }
+
+    .chart-container,
+    .legend-container {
+        flex: 1;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+}

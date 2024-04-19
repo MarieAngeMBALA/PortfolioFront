@@ -41,7 +41,7 @@ const ProjectTemplate = () => {
     if (!project) return <div>Chargement...</div>;
 
     return (
-        <div>
+        <div className="project-template-container">
             <button onClick={goBackToProjects}>Back to Project List</button>
             <h1>{project.title}</h1>
             <p>{project.description}</p>
