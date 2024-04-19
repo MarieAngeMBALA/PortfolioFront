@@ -1,5 +1,5 @@
 import React from 'react';
-import './footer.css'; // Votre CSS pour la section About
+import './footer.css'; 
 
 const FooterSection = () => {
   return (

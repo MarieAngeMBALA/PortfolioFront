@@ -36,7 +36,7 @@ const Navbar = () => {
           {isAdminLoggedIn ? 
             <div className="icon-container">
               <FaceIcon style={{ fontSize: 30 }} />
-              <div className="icon-label">Log-out</div>
+              <div className="icon-label">ADMIN</div>
             </div> :
             <div className="icon-container">
               <AccountCircleIcon style={{ fontSize: 30 }} />

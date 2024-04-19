@@ -1,0 +1,60 @@
+.footer {
+    background-color: #000; /* Footer background */
+    color: #fff; /* Text color */
+    padding: 20px 0; /* Top and bottom padding */
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between social icons and navigation links */
+    align-items: center; /* Center items vertically */
+    font-family: Arial, sans-serif; /* Default font */
+  }
+  
+  .social-icons {
+    list-style: none; /* Remove list bullets */
+    display: flex; /* Layout icons horizontally */
+    gap: 10px; /* Space between icons */
+    padding-left: 0; /* Remove default padding */
+    margin-left: 20px; /* Margin from the left edge of the footer */
+  }
+  
+  .social-icons li {
+    display: inline; /* Display list items inline */
+  }
+  
+  .social-icons li a {
+    display: inline-block; /* Display anchor tags as inline-block */
+    color: #fff; /* Icon color */
+    text-decoration: none; /* Remove underline from icons */
+  }
+  
+  .social-icons li a:hover {
+    color: #ddd; /* Icon hover color */
+  }
+  
+  .footer-nav {
+    list-style: none; /* Remove list bullets */
+    display: flex; /* Layout navigation links horizontally */
+    gap: 15px; /* Space between navigation links */
+    padding-right: 0; /* Remove default padding */
+    margin-right: 20px; /* Margin from the right edge of the footer */
+  }
+  
+  .footer-nav li {
+    display: inline; /* Display list items inline */
+  }
+  
+  .footer-nav li a {
+    color: #fff; /* Link color */
+    text-decoration: none; /* Remove underline from links */
+    padding: 5px; /* Padding for clickable area */
+  }
+  
+  .footer-nav li a:hover {
+    text-decoration: underline; /* Underline link on hover */
+  }
+  
+  .footer-info {
+    text-align: center; /* Center the text */
+    padding-top: 10px; /* Space above the text */
+    font-size: 0.8em; /* Smaller font size */
+  }
+  
