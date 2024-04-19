@@ -1,60 +1,76 @@
 .footer {
-    background-color: #000; /* Footer background */
-    color: #fff; /* Text color */
-    padding: 20px 0; /* Top and bottom padding */
-    display: flex; /* Use flexbox for layout */
-    justify-content: space-between; /* Space between social icons and navigation links */
-    align-items: center; /* Center items vertically */
-    font-family: Arial, sans-serif; /* Default font */
+    background-color: #e7e0e0; /* Couleur de fond */
+    color: rgb(19, 18, 18); /* Couleur du texte */
+    padding: 1rem 0; /* Padding vertical pour donner de l'espace */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Arial', sans-serif;
+    position: fixed; /* Fixe le footer en bas de la page */
+    left: 0;
+    bottom: 0;
+    width: 100%; /* Largeur totale */
+    height: 60px; /* Hauteur fixe du footer */
+    z-index: 100; /* S'assure que le footer est au-dessus des autres éléments */
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.3); /* Ombre pour le distinguer du contenu */
   }
   
   .social-icons {
-    list-style: none; /* Remove list bullets */
-    display: flex; /* Layout icons horizontally */
-    gap: 10px; /* Space between icons */
-    padding-left: 0; /* Remove default padding */
-    margin-left: 20px; /* Margin from the left edge of the footer */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 20px; /* Espacement depuis le bord gauche */
   }
   
-  .social-icons li {
-    display: inline; /* Display list items inline */
+  .social-icons a {
+    color: rgb(20, 19, 19);
+    margin: 0 10px;
+    font-size: 24px; /* Taille des icônes */
+    transition: color 0.3s ease;
   }
   
-  .social-icons li a {
-    display: inline-block; /* Display anchor tags as inline-block */
-    color: #fff; /* Icon color */
-    text-decoration: none; /* Remove underline from icons */
-  }
-  
-  .social-icons li a:hover {
-    color: #ddd; /* Icon hover color */
+  .social-icons a:hover {
+    color: #545050; /* Couleur au survol des icônes */
   }
   
   .footer-nav {
-    list-style: none; /* Remove list bullets */
-    display: flex; /* Layout navigation links horizontally */
-    gap: 15px; /* Space between navigation links */
-    padding-right: 0; /* Remove default padding */
-    margin-right: 20px; /* Margin from the right edge of the footer */
+    list-style: none;
+    display: flex;
+    margin-right: 20px; /* Espacement depuis le bord droit */
   }
   
-  .footer-nav li {
-    display: inline; /* Display list items inline */
+  .footer-nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s ease;
   }
   
-  .footer-nav li a {
-    color: #fff; /* Link color */
-    text-decoration: none; /* Remove underline from links */
-    padding: 5px; /* Padding for clickable area */
-  }
-  
-  .footer-nav li a:hover {
-    text-decoration: underline; /* Underline link on hover */
+  .footer-nav a:hover {
+    text-decoration: underline; /* Soulignement au survol */
   }
   
   .footer-info {
-    text-align: center; /* Center the text */
-    padding-top: 10px; /* Space above the text */
-    font-size: 0.8em; /* Smaller font size */
+    text-align: center;
+    width: 100%;
+    font-size: 0.8em;
+  }
+  
+  /* Pour empêcher le contenu de se cacher derrière le footer */
+  .body-content {
+    padding-bottom: 80px; /* Au moins la hauteur du footer */
+  }
+  
+  /* Média query pour le responsive design */
+  @media (max-width: 768px) {
+    .footer {
+      flex-direction: column;
+      height: auto; /* Hauteur automatique en fonction du contenu */
+      padding: 1rem; /* Padding plus important sur petits écrans */
+    }
+  
+    .social-icons, .footer-nav {
+      margin: 10px 0; /* Espacement vertical pour les éléments */
+    }
   }
   
