@@ -19,7 +19,6 @@ const PortfolioPage = () => {
         <Route path="/projects/:projectId" element={<ProjectTemplate />} />
         <Route path="/" element={<ProjectSection />} />
       </Routes>
-      // contenu 
     </div>
   );
 };

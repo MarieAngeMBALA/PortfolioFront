@@ -11,7 +11,7 @@
     text-decoration: none; /* Pas de soulignement */
     margin-left: 20px; /* Espacement entre les liens */
     padding: 10px; /* Espace autour des liens pour un meilleur toucher */
-    border: 4px solid transparent; /* Préparer la bordure mais la rendre transparente */
+    border: 2px solid transparent; /* Préparer la bordure mais la rendre transparente */
     transition: border-color 0.3s; /* Transition pour l'animation de la bordure */
 }
 
@@ -29,9 +29,9 @@
 
 .name{
   color: aliceblue;
-  margin-right: 400px;
+  margin-right: 40%;
   font-size: 1.8rem;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-family: inter;
 }
 
 .navbar-login-icon .icon-container {

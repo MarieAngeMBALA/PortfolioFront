@@ -1,0 +1,105 @@
+.mypage-container {
+  max-width: 1200px; /* or whatever maximum width you prefer */
+  margin: auto;
+  padding: 20px;
+  
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow for some depth */
+}
+
+.title-section {
+  text-align: center;
+  padding: 20px;
+}
+
+.title-section h1 {
+  font-size: 2.5rem; /* Large font size for the title */
+  color: #333; /* Dark grey color for the text */
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  font-size: 1.5rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.title-section p {
+  color: #666;
+  line-height: 1.6;
+}
+
+.quote {
+  font-style: italic;
+  color: #555;
+  border-top: 1px solid #ddd; /* A subtle line before the quote */
+  padding-top: 10px; /* Space above the quote */
+  margin-top: 20px; /* Space below the main text */
+}
+
+.images-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  border-top: 1px solid #ddd; /* A line to separate this section from the content above */
+  margin-top: 20px;
+}
+
+.images-section img {
+  width: 150px; /* Fixed width, adjust as needed */
+  height: 150px; /* Fixed height for a square aspect ratio */
+  border-radius: 50%; /* Circular images */
+  margin: 0 10px; /* Space between images */
+  object-fit: cover; /* Ensure images cover the area */
+  border: 3px solid #eee; /* Optional: add border for images */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .images-section {
+    flex-direction: column;
+  }
+
+  .images-section img {
+    margin-bottom: 10px;
+  }
+
+  .title-section h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+
+.languages-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.language-group {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.language-logo {
+  width: 60px; /* Adjust based on your actual size */
+  height: auto;
+  padding: 0 15px; /* Spacing on the sides */
+  margin: 0 25px; 
+}
+
+.divider {
+  border-left: 2px solid #ccc; /* Gray vertical line */
+  height: 100px; /* Adjust based on your actual size */
+}
+
+h1{
+  font-family: inter;
+  font-size: 2.5rem;
+  font-weight: 100px;
+}
